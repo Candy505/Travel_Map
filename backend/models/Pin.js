@@ -4,18 +4,18 @@ const PinSchema = new mongoose.Schema(
     {
     username: {
         type:String,
-        require:true,
+        required:true,
         
     },
     title: {
         type:String,
-        require:true,
+        required:true,
         max: 50,
         min: 5,
     },
     description: {
         type:String,
-        require:true,
+        required:true,
         min:10,
     },
 
@@ -23,17 +23,17 @@ const PinSchema = new mongoose.Schema(
         type:Number,
         min:0,
         max:5,
-        require:true,
+        required:true,
     },
     lat:{
         type:Number,
-        require:true,
+        required:true,
     },
-    
     long:{
         type:Number,
-        require:true,
-    }
+        required:true,
+    }, 
+    
 },
  {timestamps:true}
 );
