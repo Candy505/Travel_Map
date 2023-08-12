@@ -37,7 +37,7 @@ function Register({setshowRegister}) {
         {close &&
         <div className='registerContainer'>
             <div className='logo'></div>
-            <span  onClick={()=> setshowRegister(false)}style={{marginLeft:"280px"}}>❌</span>
+            <span  onClick={()=> setshowRegister(false)}style={{marginLeft:"280px",cursor:"pointer"}}>❌</span>
             <form onSubmit={handleSubmit}>
                 <input type='text' placeholder='username' ref={nameRef}></input>
                 <input type='email' placeholder='email' ref={emailRef}></input>

@@ -38,11 +38,11 @@ function Login({setshowLogin,mystorage,currentUser}) {
         {close &&
         <div className='loginContainer'>
             <div className='logo'></div>
-            <span  onClick={()=> setshowLogin(false)}style={{marginLeft:"280px"}}>❌</span>
+            <span  onClick={()=> setshowLogin(false)}style={{marginLeft:"280px", cursor:"pointer"}}>❌</span>
             <form onSubmit={handleSubmit}>
                 <input type='text' placeholder='username' ref={nameRef}></input>
                 <input type="password" placeholder='password' ref={passwordRef}></input>
-                <button>Login</button>
+                <button style={{backgroundColor:"teal"}}>Login</button>
               
                 {error &&
                     <span className='fail'>Something went wrong.</span>

@@ -20,16 +20,17 @@
 
 
 .container{
-  border: 3px solid rgb(22, 22, 21);
-  padding: 10px;
+  
   border-radius: 12px;
+ 
 }
 
 .box{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-   margin-bottom: 12px;
+  margin-bottom: 12px;
+  
 }
 
 form {
@@ -61,6 +62,11 @@ input::placeholder, textarea::placeholder{
 .map-box {
   margin-top: 20px;
   height: 500px;
+  border: 5px solid rgb(12, 12, 12);
+  margin-left: 2px;
+  margin-right: 2px;
+   border-radius: 5px;
+  
 }
 
 .btn{
@@ -95,5 +101,19 @@ input::placeholder, textarea::placeholder{
 
 .login,.register {
 margin-right: 20px;
+}
+
+
+.bckgrnd {
+ background-image:  url('https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHRyYXZlbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+
+}
+
+
+h5{
+  color: rgb(102, 107, 169);
+}
+h3{
+  color: rgb(185, 31, 31);
 }
 

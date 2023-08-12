@@ -122,17 +122,19 @@ const handleLogout = () => {
   return (
     <>
     {currentUser ?(
-      <button className='logout btn' onClick={handleLogout}>Log Out</button>)
+      <div className='bckgrnd'>
+      <button className='logout btn' onClick={handleLogout}>Log Out</button></div>)
         :(
-        <div>
+        <div className='bckgrnd'>
           
           <button className='login btn' onClick={()=>setshowLogin(true)}>Login</button>
           <button className='register btn' onClick={()=>setshowRegister(true)}>Register</button>
         </div>)      
       }
+      <div className='bckgrnd'>
       {showRegister && <Register setshowRegister={setshowRegister}/>}
       {showLogin && <Login setshowLogin={setshowLogin} mystorage={mystorage} currentUser={setUser}/>}
-   
+   </div>
    
       <MapContainer className='map-box' center={[26.7041, 77.1025]} zoom={4}
         minZoom={3}
@@ -154,23 +156,22 @@ const handleLogout = () => {
               position={[p.lat, p.long]}
               icon={customIcon(p.username)}
             >
-              <Popup>
+              <Popup className='popup'>
                 <div className='container'>
                   <div className='box'>
-                    <h4>Place</h4>
+                    <h5>Place</h5>
                     <h3>{p.title}</h3>
                     <br></br>
-                    <h4>Review</h4>
-                    <h5>{p.description}</h5>
+                    <h5>Review</h5>
+                    <h3>{p.description}</h3>
                   </div>
 
-                  <div className=''>
-                    <div>
-                      <b>Rating</b> <br />
-                      {Array(p.rating).fill(<span>⭐</span>)}
+                  <div className='info'>
+                    <div className=''>
+                      <h5>Rating</h5> 
+                      <h3>{Array(p.rating).fill(<span>⭐</span>)}</h3>
                     </div>
-
-                    <br />
+                    <br></br>
                     <i>Information created by <b>{p.username}</b></i>
                     <br /><br />
                     <h6>{format(p.createdAt)}</h6>
